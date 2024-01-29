@@ -1,0 +1,63 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": ["prettier", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "env": {
+      "node": true
+  },
+  "rules": {
+    "@typescript-eslint/explicit-member-accessibility": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-parameter-properties": 0,
+    "@typescript-eslint/interface-name-prefix": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/no-explicit-any": 2,
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/default-param-last": 2,
+    "@typescript-eslint/no-use-before-define": 2,
+    "@typescript-eslint/array-type": 2,
+    "@typescript-eslint/no-unused-vars": 2,
+    "@typescript-eslint/consistent-type-definitions": 2,
+    "@typescript-eslint/restrict-plus-operands": 2,
+    "@typescript-eslint/no-shadow": 2, // no shadow variable name inside nested blocks
+    "@typescript-eslint/no-redeclare": 2, // no variable redeclare in same scope
+    "@typescript-eslint/dot-notation": 2,
+    "@typescript-eslint/no-unsafe-assignment": 2,
+    "@typescript-eslint/no-unsafe-member-access": 2,
+    "@typescript-eslint/no-unsafe-call": 2,
+    "@typescript-eslint/no-unsafe-return": 2,
+    "@typescript-eslint/no-unsafe-argument": 2,
+    "@typescript-eslint/restrict-template-expressions": 2,
+    "@typescript-eslint/prefer-function-type": 2,
+    "@typescript-eslint/prefer-optional-chain": 2,
+    "no-unreachable": 2,
+    "no-unreachable-loop": 2,
+    "no-undef": 2,
+    "no-template-curly-in-string": 2, // prevent from 'Hi, im ${myName}'
+    "no-self-compare": 2,
+    "no-self-assign": 2,
+    "no-duplicate-imports": 2,
+    "no-dupe-else-if": 2,
+    "no-const-assign": 2,
+    "curly": 2, // curly braces always, prevent from if (a === b) break;
+    "no-lonely-if": 2,
+    "no-console": 2,
+    "id-length": ["error", { "exceptions": ["R"] }], // minimum variable name length
+    "no-new-func": 2, // prevent new keyboard in front of functions
+    "no-octal": 2, // no const x = 0655;
+    "key-spacing": 2, // space between a: 2
+    "no-nested-ternary": 2,
+    "max-lines-per-function": ["error", 80],
+    "prefer-template": 2, // prefer `Hi, my name is ${myName}` instead of 'Hi, my name is ' + myName;
+    "object-curly-spacing": ["error", "always"],
+    "brace-style": ["error", "1tbs"],
+    "space-before-blocks": ["error", "always"],
+    "keyword-spacing": 2
+  }
+}
